@@ -11,7 +11,8 @@ function App() {
   let [query, setQuery] = useState('');
   let [weather, setWeather] = useState({});
   let [isError, setIsError] = useState(false);
-  let cssClassName = 'app rain';
+  let [cssClassName, setCSSClassName] = useState('app rain');
+  // let cssClassName = 'app rain';
 
   const search = (evt) => {
     if (evt.key === 'Enter') {
@@ -20,8 +21,8 @@ function App() {
         .then((result) => {
           setWeather(result);
           setQuery('');
-          cssClassName = getCSSClassName(result);
-          document.getElementById('container').className = cssClassName;
+          setCSSClassName(getCSSClassName(result));
+          // document.getElementById('container').className = cssClassName;
           // document.getElementById('footer').className = 'footer special';
           document.querySelectorAll('.footer').className = 'footer special';
         });
