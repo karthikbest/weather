@@ -10,6 +10,7 @@ const api = {
 function App() {
   let [query, setQuery] = useState('');
   let [weather, setWeather] = useState({});
+  let [isError, setIsError] = useState(false);
   let cssClassName = 'app rain';
 
   const search = (evt) => {
@@ -61,10 +62,14 @@ function App() {
   };
 
   let getCSSClassName = (weather) => {
-    console.log('In getCSS fn');
     if (weather.weather == undefined) {
-      return 'error';
+      console.log('err');
+      setIsError(true);
+      // document.querySelector('#error').innerHTML =
+      //   'Invalid city name. Please correct';
+      return cssClassName;
     }
+    setIsError(false);
     if (!weather.weather[0].main) {
       return 'app';
     }
@@ -116,17 +121,27 @@ function App() {
               <div className="weather">{weather.weather[0].main}</div>
             </div>
             <footer class="footer">
-              KnowWeather.com - Developed with passion by Karthik | Email:
+              Developed with passion by Karthik | Email:
               <a href="mailto:aswamykarthik@gmail.com">
                 aswamykarthik@gmail.com
               </a>
             </footer>
           </div>
         ) : (
-          <footer class="footer">
-            Developed with passion by Karthik | Email:
-            <a href="mailto:aswamykarthik@gmail.com">aswamykarthik@gmail.com</a>
-          </footer>
+          <div>
+            {isError ? (
+              <div id="error">Invalid City Name. Please correct</div>
+            ) : (
+              ''
+            )}
+
+            <footer class="footer">
+              Developed with passion by Karthik | Email:
+              <a href="mailto:aswamykarthik@gmail.com">
+                aswamykarthik@gmail.com
+              </a>
+            </footer>
+          </div>
         )}
       </main>
     </div>
