@@ -110,7 +110,7 @@ function App() {
           />
         </div>
         {weather.main ? (
-          <div>
+          <div className="container">
             <div className="location-box">
               <div className="location">
                 {weather.name}, {weather.sys.country}
@@ -129,7 +129,7 @@ function App() {
             </footer>
           </div>
         ) : (
-          <div>
+          <div className="container">
             {isError ? (
               <div id="error">Invalid City Name. Please correct</div>
             ) : (
