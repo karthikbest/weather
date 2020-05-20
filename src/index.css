@@ -9,7 +9,7 @@ body {
 }
 
 .app {
-  background-image: url('./assets/snow.jpg');
+  background-image: url('./assets/general.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4s ease-out;
@@ -32,6 +32,10 @@ body {
 
 .app.sunny {
   background-image: url('./assets/sunny.jpg');
+}
+
+.app.snow {
+  background-image: url('./assets/snow.jpg');
 }
 
 main {

@@ -90,6 +90,9 @@ function App() {
       case 'mist':
         return 'app mist';
 
+      case 'snow':
+        return 'app snow';
+
       default:
         return 'app';
     }
