@@ -11,7 +11,7 @@ function App() {
   let [query, setQuery] = useState('');
   let [weather, setWeather] = useState({});
   let [isError, setIsError] = useState(false);
-  let [cssClassName, setCSSClassName] = useState('app rain');
+  let [cssClassName, setCSSClassName] = useState('app');
   // let cssClassName = 'app rain';
 
   const search = (evt) => {
