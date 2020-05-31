@@ -134,7 +134,7 @@ function App() {
         ) : (
           <div className="container">
             {isError ? (
-              <div id="error">Invalid City Name. Please correct</div>
+              <div id="error">Invalid City Name. Please correct.</div>
             ) : (
               ''
             )}
