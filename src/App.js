@@ -8,7 +8,7 @@ const api = {
 };
 
 function App() {
-  let [query, setQuery] = useState('');
+  let [query, setQuery] = useState('Whitby, CA');
   let [weather, setWeather] = useState({});
   let [isError, setIsError] = useState(false);
   let [cssClassName, setCSSClassName] = useState('app');
