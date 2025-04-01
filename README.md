@@ -1,4 +1,3 @@
-
 @media (min-width: 769px) {
   /* Tabs Layout */
   .tabsList {
