@@ -1,28 +1,25 @@
 @media (min-width: 769px) {
   .tabsList {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-bottom: 2px solid #ccc;
-    padding-left: 1rem;
-    gap: 1.5rem; /* spacing between tabs */
-    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #d3d3d3;
+    margin: 0;
+    padding: 0;
   }
 
   .tabsTrigger {
+    flex: 1;
+    text-align: center;
     background: none;
     border: none;
     font: inherit;
-    padding: 0.5rem 0;
-    margin: 0;
+    padding: 0.75rem 0;
+    font-weight: 600;
     border-bottom: 3px solid transparent;
     cursor: pointer;
-    font-weight: 600;
-    color: #000;
+    transition: border-color 0.2s ease;
   }
 
   .tabsTrigger[data-state="active"] {
-    border-bottom: 3px solid #0074cc; /* strong blue underline */
-    color: #000;
+    border-bottom-color: #0074cc; /* Blue underline */
   }
 }
