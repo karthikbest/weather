@@ -1,93 +1,74 @@
-/* Show/hide based on screen size */
-.mobile-only {
-  display: none;
-}
-.desktop-only {
-  display: block;
-}
 
-@media (max-width: 768px) {
-  .mobile-only {
-    display: block;
-  }
-  .desktop-only {
-    display: none;
-  }
-
-  .accordionRoot {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-  }
-
-  .accordionItem {
-    border-bottom: 1px solid #eee;
-  }
-
-  .accordionTrigger {
-    all: unset;
-    width: 100%;
-    background-color: #f5f5f5;
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: 600;
+@media (min-width: 769px) {
+  /* Tabs Layout */
+  .tabsList {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid #ccc;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tabsTrigger {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 1rem;
+    margin-right: 1.5rem;
+    border-bottom: 2px solid transparent;
     cursor: pointer;
-    border-bottom: 1px solid #ccc;
+    font-weight: 500;
   }
 
-  .accordionContent {
-    padding: 0.5rem 1rem;
-    animation: slideDown 300ms ease;
-    border-top: 1px solid #ddd;
+  .tabsTrigger[data-state="active"] {
+    border-bottom: 2px solid #0074cc; /* Blue underline for active tab */
+    font-weight: 600;
   }
 
-  .arrow {
-    transition: transform 0.3s ease;
-    font-size: 1.25rem;
+  /* Profile header background block */
+  .profileHeaderSection {
+    background-color: #003a6d; /* Dark blue */
+    padding: 2rem 1rem;
+    position: relative;
   }
 
-  [data-state='open'] .arrow {
-    transform: rotate(180deg);
+  .myProfileData {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    top: -2.5rem; /* pulls it up into the blue section */
+    margin: 0 1rem;
   }
-}
 
-/* Shared styling for Tabs */
-.tabsList {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 0.5rem 0;
-}
+  .myProfilePhoto {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.tabsTrigger {
-  background: transparent;
-  border: none;
-  padding: 0.5rem 1rem;
-  font: inherit;
-  border-bottom: 2px solid transparent;
-  cursor: pointer;
-}
+  .myProfileDisplayName {
+    font-weight: bold;
+    font-size: 1rem;
+  }
 
-.tabsTrigger[data-state="active"] {
-  border-bottom-color: #0074cc; /* blue underline */
-  font-weight: 600;
-}
+  .myProfileEmailText {
+    font-size: 0.9rem;
+    color: #555;
+  }
 
-.tabsTrigger[data-state="inactive"] {
-  border-bottom-color: transparent;
-}
-
-.tabsContent {
-  padding: 1rem 0;
-}
-
-/* Optional: heading */
-.settingsHeading {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin: 1rem 0 0.5rem 0;
+  /* Optional: tighten spacing */
+  .tabsContent {
+    padding-top: 1rem;
+  }
 }
