@@ -1,20 +1,30 @@
+/* Show/hide based on screen size */
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .mobile-only {
     display: block;
-    margin: 1rem;
+  }
+  .desktop-only {
+    display: none;
   }
 
-  .AccordionRoot {
+  .accordionRoot {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
   }
 
-  .AccordionItem {
+  .accordionItem {
     border-bottom: 1px solid #eee;
   }
 
-  .AccordionTrigger {
+  .accordionTrigger {
     all: unset;
     width: 100%;
     background-color: #f5f5f5;
@@ -28,33 +38,10 @@
     border-bottom: 1px solid #ccc;
   }
 
-  .AccordionContent {
+  .accordionContent {
     padding: 0.5rem 1rem;
     animation: slideDown 300ms ease;
     border-top: 1px solid #ddd;
-  }
-
-  .TabsList {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
-  }
-
-  .TabsTrigger {
-    background: transparent;
-    border: none;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.75rem 1rem;
-    border-left: 4px solid transparent;
-    transition: background 0.2s;
-  }
-
-  .TabsTrigger[data-state="active"] {
-    border-left-color: #0074cc;
-    background-color: #eef6ff;
   }
 
   .arrow {
@@ -65,18 +52,42 @@
   [data-state='open'] .arrow {
     transform: rotate(180deg);
   }
-
-  /* Optional: add heading above accordion */
-  .mobileSettingsHeading {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    padding: 0 0.5rem;
-  }
 }
 
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none;
-  }
+/* Shared styling for Tabs */
+.tabsList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.tabsTrigger {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tabsTrigger[data-state="active"] {
+  border-bottom-color: #0074cc; /* blue underline */
+  font-weight: 600;
+}
+
+.tabsTrigger[data-state="inactive"] {
+  border-bottom-color: transparent;
+}
+
+.tabsContent {
+  padding: 1rem 0;
+}
+
+/* Optional: heading */
+.settingsHeading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
 }
