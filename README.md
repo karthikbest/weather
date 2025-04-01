@@ -1,44 +1,82 @@
+/* Base visibility toggles */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
 @media (max-width: 768px) {
-  /* Stack the tab buttons vertically */
-  [role="tablist"] {
-    flex-direction: column !important;
-    align-items: stretch;
-    border-bottom: none;
-    border-right: 1px solid #ccc;
-    padding-right: 1rem;
-    gap: 0.5rem;
+  .mobile-only {
+    display: block;
+    margin: 1rem 0;
   }
 
-  [role="tab"] {
-    width: 100%;
-    text-align: left;
-    border: none;
-    border-left: 4px solid transparent;
-    padding: 0.75rem 1rem;
-    font-weight: bold;
-    background-color: #f9f9f9;
+  .desktop-only {
+    display: none;
   }
 
-  [role="tab"][data-state="active"] {
-    border-left-color: #0074cc; /* highlight active tab */
-    background-color: #eef6ff;
+  .AccordionRoot {
+    border: 1px solid #ccc;
+    border-radius: 6px;
   }
 
-  /* Make tab content full width and stack underneath */
-  [role="tabpanel"] {
-    width: 100%;
-    padding: 1rem;
-    border-top: 1px solid #ddd;
-    margin-top: 1rem;
+  .AccordionItem {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
   }
 
-  /* Optional: container styling for clarity */
-  .TabsRoot {
+  .AccordionHeader {
     display: flex;
-    flex-direction: column;
+  }
+
+  .AccordionTrigger {
+    all: unset;
+    background-color: #f9f9f9;
+    font-weight: bold;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .AccordionContent {
+    padding: 0.5rem 1rem;
+    animation: slideDown 300ms ease;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  [data-state='open'] .arrow {
+    transform: rotate(180deg);
   }
 
   .TabsList {
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
+
+  .TabsTrigger {
+    background: white;
+    border: none;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid transparent;
+  }
+
+  .TabsTrigger[data-state='active'] {
+    border-left-color: #0074cc;
+    background-color: #eef6ff;
+  }
+}
+
+/* Shared styling for tab content */
+.TabsContent {
+  padding: 1rem;
 }
