@@ -1,1 +1,1 @@
-^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ ]?\d[ABCEGHJ-NPRSTV-Z]\d$
+^[A-Za-z]\d[A-Za-z][ ]?\d[A-Za-z]\d$
