@@ -1,1 +1,1 @@
-^[A-Za-z]\d[A-Za-z][ ]?\d[A-Za-z]\d$
+/^[A-Z]\d[A-Z][ ]?\d[A-Z]\d$/i;
