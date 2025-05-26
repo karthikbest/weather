@@ -1,37 +1,55 @@
 <pre>
+@media (max-width: 480px) {
+  .xSessionDialogContent.mobile {
+    width: 296px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9; /* Figma: Neutrals/Grey 2 */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
 
-.xSessionDialogContent.mobile .xSessionDialogTitle {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  text-align: center;
-  margin-bottom: 8px;
+  .xSessionDialogTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .xSessionDialogBody {
+    text-align: center;
+  }
+
+  #xSessionButtonRow {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  #xSessionBtnExtend,
+  #xSessionBtnLogout {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  #xSessionBtnExtend {
+    background-color: #005DAA; /* Primary Blue */
+    color: #fff;
+    border: none;
+  }
+
+  #xSessionBtnLogout {
+    background-color: transparent;
+    border: 1px solid #005DAA;
+    color: #005DAA;
+  }
 }
-
-.xSessionDialogContent.mobile #xMessage1 {
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  color: #333;
-  margin-bottom: 16px;
-  max-width: 80%;
-}
-
-.xSessionDialogContent.mobile #x-timer {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 40px;
-  margin: 8px 0 24px;
-  text-align: center;
-  color: #000;
-}
-
-.xSessionDialogContent.mobile .xSessionButtonRow {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  align-items: center;
-}
-
 </pre>
