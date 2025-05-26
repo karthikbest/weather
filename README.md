@@ -1,28 +1,22 @@
-.xSessionDialogContent.mobile {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  max-width: 90vw;
-  width: 100%;
-  padding: 16px;
-  background: white;
-  border-radius: 8px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
+@media (min-width: 480px) and (max-width: 768px) {
+  .xSessionDialogContent {
+    max-width: 90vw;
+    padding: 16px;
+    display: block; /* Or remove flex */
+  }
 
-.xSessionDialogHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 12px;
-  width: 100%;
-}
+  .x-message-container {
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
 
-#xMessage0, #xMessage1, #x-timer {
-  word-wrap: break-word;
-  max-width: 100%;
-  padding: 0 8px;
+  #xMessage1,
+  #xMessage0 {
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+    overflow-wrap: break-word;
+  }
 }
