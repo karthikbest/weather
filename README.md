@@ -1,4 +1,11 @@
-<pre>
-^(?=.{9,64}$)[a-zA-Z0-9_.-]+(?:\.[a-zA-Z0-9_.-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$
 
-</pre>
+@media (max-width: 375px) {
+  .rt-Grid.errorCard,
+  .registrationContainer {
+    max-width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
