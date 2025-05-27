@@ -1,22 +1,4 @@
-@media (min-width: 480px) and (max-width: 768px) {
-  .xSessionDialogContent {
-    max-width: 90vw;
-    padding: 16px;
-    display: block; /* Or remove flex */
-  }
+<pre>
+^(?=.{9,64}$)[a-zA-Z0-9_.-]+(?:\.[a-zA-Z0-9_.-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$
 
-  .x-message-container {
-    max-width: 100%;
-    white-space: normal;
-    word-break: break-word;
-  }
-
-  #xMessage1,
-  #xMessage0 {
-    width: 100%;
-    white-space: normal;
-    word-break: break-word;
-    text-align: center;
-    overflow-wrap: break-word;
-  }
-}
+</pre>
